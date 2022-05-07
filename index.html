@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>my div</h1>
+        <ul class="my-list">
+            <li class="list">list-1</li>
+            <li class="list">list-2</li>
+            <li class="list">list-3</li>
+            <li class="list">list-4</li>
+        </ul>
+    </div>
+    <button class="btn">add item</button>
+
+    <script>
+// var items = document.querySelectorAll(".list")
+// for (let i = 0; i < items.length; i++) {
+//     const item = items[i];
+//     item.addEventListener("click", function(e){
+//         e.target.parentNode.removeChild(e.target)
+//     })
+// }
+
+
+document.querySelector(".btn").addEventListener("click", function(){
+    var itemPrantes = document.querySelector(".my-list")
+    var newItem = document.createElement("li")
+    newItem.innerText = "add a new item"
+    itemPrantes.appendChild(newItem)
+})
+
+document.querySelector(".my-list").addEventListener("click", function(event){
+    event.target.parentNode.removeChild(event.target)
+})
+
+
+
+    </script>
+</body>
+</html>
